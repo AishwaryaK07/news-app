@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewsService } from "../news.service";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  data: any;
+  constructor(private newsService: NewsService) {}
+
+  ngOnInit(){
+    this.newsService
+    .getData('top-headlines?country=in')
+    .subscribe(data => {
+        console.log(data);
+        this.data = data;
+      });
+  }
+
+  visitLink(){
+   // window.open(data.url, '_system');
+   console.log("hi");
+  }
 
 }
