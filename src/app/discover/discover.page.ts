@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NewsService } from '../news.service';
 
 @Component({
   selector: 'app-discover',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscoverPage implements OnInit {
 
-  constructor() { }
+  constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {
+    
   }
+  onBusinessClick(){
+    console.log("business");
+    this.router.navigate(['/category']);
+  }
+  
 
 }

@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>discover</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+  <ion-content class="card-layout">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card (click)="onBusinessClick()">
+              <ion-card-content>Business</ion-card-content>
+          </ion-card>      
+        </ion-col>
+        <ion-col>
+          <ion-card>
+              <ion-card-content>Entertainment</ion-card-content>
+          </ion-card> 
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-card>
+              <ion-card-content>General</ion-card-content>
+          </ion-card>  
+        </ion-col>
+        <ion-col>
+          <ion-card>
+              <ion-card-content>Health</ion-card-content>
+          </ion-card>  
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+          <ion-card>
+              <ion-card-content>Science</ion-card-content>
+          </ion-card>  
+        </ion-col>
+        <ion-col>
+          <ion-card>
+              <ion-card-content>Sports</ion-card-content>
+          </ion-card>  
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col>
+         <ion-card>
+            <ion-card-content>Technology</ion-card-content>
+         </ion-card> 
+       </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

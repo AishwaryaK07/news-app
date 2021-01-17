@@ -20,9 +20,9 @@ export class HomePage {
       });
   }
 
-  visitLink(){
+  visitLink(article){
    // window.open(data.url, '_system');
-   console.log("hi");
+   console.log(article.url); 
+   window.open(article.url, "_blank");
   }
-
 }
