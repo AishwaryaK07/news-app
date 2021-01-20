@@ -3,53 +3,41 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-card (click)="onCategoryClick('business')" 
-          >
-            <ion-card-content 
-                
-            >Business</ion-card-content>
+          <ion-card (click)="onCategoryClick('business')" >
+            <ion-card-content>Business</ion-card-content>
           </ion-card>      
         </ion-col>
         <ion-col> 
           <ion-card  (click)="onCategoryClick('entertainment')">
-              <ion-card-content
-              >Entertainment</ion-card-content>
+              <ion-card-content>Entertainment</ion-card-content>
           </ion-card> 
         </ion-col>
       </ion-row>
   
       <ion-row>
         <ion-col>
-          <ion-card (click)="onCategoryClick('general')">
-              <ion-card-content>General</ion-card-content>
-          </ion-card>  
-        </ion-col>
-        <ion-col>
           <ion-card (click)="onCategoryClick('health')">
               <ion-card-content>Health</ion-card-content>
           </ion-card>  
         </ion-col>
-      </ion-row>
-  
-      <ion-row>
         <ion-col>
           <ion-card (click)="onCategoryClick('science')">
               <ion-card-content>Science</ion-card-content>
           </ion-card>  
         </ion-col>
+      </ion-row>
+  
+      <ion-row>
         <ion-col>
           <ion-card (click)="onCategoryClick('sports')">
               <ion-card-content>Sports</ion-card-content>
           </ion-card>  
         </ion-col>
-      </ion-row>
-  
-      <ion-row>
         <ion-col>
-         <ion-card (click)="onCategoryClick('technology')">
-            <ion-card-content>Technology</ion-card-content>
-         </ion-card> 
-       </ion-col>
+          <ion-card (click)="onCategoryClick('technology')">
+             <ion-card-content>Technology</ion-card-content>
+          </ion-card> 
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ion-content>

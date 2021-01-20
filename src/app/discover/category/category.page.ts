@@ -13,7 +13,7 @@ export class CategoryPage implements OnInit {
    }
 
   ngOnInit(){
-    //check for type of category
+    //check for type of category & set the api url accordingly
     if(this.newsService.getCategory().match('business'))
     {
      this.newsService
@@ -22,20 +22,12 @@ export class CategoryPage implements OnInit {
             console.log(data);
             this.data = data;
           });
+      
     }
     else if(this.newsService.getCategory().match('entertainment'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=entertainment')
-          .subscribe(data => {
-            console.log(data);
-            this.data = data;
-          });
-    }
-    else if(this.newsService.getCategory().match('general'))
-    {
-     this.newsService
-        .getData('top-headlines?country=in&category=general')
           .subscribe(data => {
             console.log(data);
             this.data = data;

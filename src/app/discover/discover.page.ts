@@ -11,9 +11,7 @@ import { NewsService } from '../news.service';
 export class DiscoverPage implements OnInit {
  
   send: string;
-  constructor(private newsService: NewsService, private router: Router) {
-    
-   }
+  constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {}
 
