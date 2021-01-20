@@ -78,7 +78,13 @@ export class CategoryPage implements OnInit {
           });
     }
     else {
-      console.log("error");
+      console.log("Default news");
+      this.newsService
+        .getData('top-headlines?country=in')
+          .subscribe(data => {
+            console.log(data);
+            this.data = data;
+          });
     }   
   }
 
