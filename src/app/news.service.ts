@@ -9,9 +9,19 @@ const API_KEY = environment.apiKey;
   providedIn: 'root'
 })
 export class NewsService {
+ 
+  public categoryTypes: string = '';
   constructor(private http: HttpClient) { }
 
   getData(url){
     return this.http.get(`${API_URL}/${url}&apiKey=${API_KEY}`);
+  }
+
+  setCategory(categoryTypes){
+    this.categoryTypes = categoryTypes;
+  }
+
+  getCategory(){
+    return this.categoryTypes;
   }
 }

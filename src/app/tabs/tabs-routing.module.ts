@@ -13,7 +13,16 @@ const routes: Routes = [
       },
       {
         path: 'discover',
-        loadChildren: () => import('../discover/discover.module').then(m => m.DiscoverPageModule)
+        children:[
+          {
+            path: '',
+            loadChildren: () => import('../discover/discover.module').then(m => m.DiscoverPageModule)
+          },
+          {
+            path: 'category',
+            loadChildren: () => import('../discover/category/category.module').then( m => m.CategoryPageModule)
+          }
+        ]
       },
       {
         path: '',
