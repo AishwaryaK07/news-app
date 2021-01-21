@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
 import { NewsService } from '../news.service';
 
 @Component({
@@ -16,11 +15,11 @@ export class DiscoverPage implements OnInit {
   ngOnInit() {}
 
   //Navigates to category page
-  onCategoryClick(categoryType: string){
+  onCategoryClick(categoryType: string, id:number){
     console.log("From discover " + categoryType);
     this.newsService.setCategory(categoryType);
     console.log("After setting value" + this.newsService.getCategory());
-    this.router.navigateByUrl('/tabs/discover/category');
+    this.router.navigateByUrl(`/tabs/discover/category/${id}`);
   }
 
 }

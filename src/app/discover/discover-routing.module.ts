@@ -9,7 +9,7 @@ const routes: Routes = [
     component: DiscoverPage
   },
   {
-    path: 'category',
+    path: 'category/:id',
     loadChildren: () => import('./category/category.module').then( m => m.CategoryPageModule)
   }
 ];

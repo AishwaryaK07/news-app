@@ -9,6 +9,7 @@ import { NewsService } from 'src/app/news.service';
 export class CategoryPage implements OnInit {
 
   data: any;
+  title: string;
   constructor(private newsService: NewsService) {
    }
 
