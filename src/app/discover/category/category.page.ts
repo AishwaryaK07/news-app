@@ -19,65 +19,107 @@ export class CategoryPage implements OnInit {
     {
      this.newsService
         .getData('top-headlines?country=in&category=business')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
       
     }
     else if(this.newsService.getCategory().match('entertainment'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=entertainment')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }
     else if(this.newsService.getCategory().match('health'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=health')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }
     else if(this.newsService.getCategory().match('science'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=science')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }
     else if(this.newsService.getCategory().match('sports'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=sports')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }
     else if(this.newsService.getCategory().match('technology'))
     {
      this.newsService
         .getData('top-headlines?country=in&category=technology')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }
     else {
       console.log("Default news");
       this.newsService
         .getData('top-headlines?country=in')
-          .subscribe(data => {
+          .then(data => {
             console.log(data);
             this.data = data;
-          });
+          })
+          .catch(error => {
+  
+            // console.log(error.status);
+             console.log(error.error); // error message as string
+            // console.log(error.headers);
+           });
     }   
   }
 

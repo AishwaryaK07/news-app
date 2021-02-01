@@ -14,10 +14,16 @@ export class HomePage {
   ngOnInit(){
     this.newsService
     .getData('top-headlines?country=in')
-    .subscribe(data => {
+    .then(data => {
         console.log(data);
         this.data = data;
-      });
+      })
+      .catch(error => {
+  
+        // console.log(error.status);
+         console.log(error.error); // error message as string
+        // console.log(error.headers);
+       });
   }
 
   visitLink(article){
